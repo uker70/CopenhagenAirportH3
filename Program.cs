@@ -12,7 +12,7 @@ namespace CopenhagenAirportH3
         {
             using (CopenhagenAirportH3Entities ctx = new CopenhagenAirportH3Entities())
             {
-
+                SQLQuery.Query(ctx);
                 foreach (Airport airport in ctx.Airports)
                 {
                     Console.WriteLine("IATA: "+airport.IATA);
@@ -29,6 +29,7 @@ namespace CopenhagenAirportH3
                     }
                     Console.WriteLine("------------");
                 }
+
 
                 Console.ReadKey();
             };
